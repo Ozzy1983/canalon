@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background: url(background.jpg) no-repeat center center fixed;
+	color: #f6f6f2;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
+    margin: 0;
+}
+
+/*header --------*/
+
+header{
+	position: fixed; /* Mantén el header fijo al desplazarte */
+	top: 30px;
+	width: 70%; /* Asegura que cubra todo el ancho */
+	display: flex;
+	justify-content: space-between;  
+	align-items: center; 
+	background: linear-gradient(to right, #3A4B59, #607D8B, #A3BCCB);
+	padding: 20px 30px;   
+	opacity: 0.9; 
+	z-index: 10;
+	font-family: 'Roboto Slab', serif;
+	border-radius: 50px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para separación */
+	
+
+}
+
+.logo{
+	width: 60px;  
+    height: auto;  
+    max-height: 50px;  
+    object-fit: contain; 
+}
+
+
+.highlight {
+    color: #16a085;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;  
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #212121;
+    text-decoration: none;
+    transition: color 0.3s ease;  
+}
+
+header nav ul li a:hover {
+    color: #F4A261;  
+}
+
+/* Responsive */
+.burger{
+    width: 30px;
+    height: auto;
+    max-height: 30px;
+}
+
+.checkbtn{
+    float: right;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check{
+    display: none;
+}
+
+/*--- MAIN CONTAINER ---*/
+
+.main-container{
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.main-container h1{
+	font-size: 2.5rem;
+	font-weight: 400;
+	transform: scale(1, 2); 
+    text-transform: uppercase; 
+}
+
+.main-container h2{
+	font-size: 2rem;
+	font-weight: 400;
+	transform: scale(1,2);
+	text-transform: uppercase;
+}
+
+.main-container h3{
+	font-size: 1.75rem;
+	font-weight: 400;
+	transform: scale(1,2);
+	text-transform: uppercase;
+}
+
+.main-container p{
+	font-size: 1rem;
+	font-weight: 400;
+	transform: scale(1, 1.20);
+}
+
+
+/*---MAIN QUIENES SOMOS ---*/
+.main-quienes-somos{ 
+	margin-top: 100px;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+
+}
+
+
+/*--- PARTE UNO NOSOTROS ---*/
+
+.nosotros{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	
+}
+
+.foto-team{
+	border-radius: 30px;
+	min-width: 300px;
+	max-width: 1000px;
+	min-height: 250px;
+	max-height: 650px;
+}
+
+
+
+/*--- PARTE DOS PRESIDENT ---*/
+
+
+.president{
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	height: auto;
+	grid-gap: 30px;
+	
+}
+
+.photo-john{
+	width: 300px;
+	height: 450px;
+	border-radius: 30px;
+	box-shadow: 2px 2px 10px rgba(245, 243, 243, 0.35);
+}
+
+.resumen-president{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	min-width: 300px;
+	width: 600px;
+	background-color: #647ca4;
+	box-shadow: 2px 2px 10px rgba(245, 243, 243, 0.35);
+	border-radius: 30px;
+	justify-content: center;
+	padding-left: 20px;
+	opacity: 0.9;
+}
+
+.resumen-president p{
+	max-width: 580px;
+}
+
+.name-role{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.redes-president{
+	display: flex;
+	gap: 8px;
+}
+
+.logo-redes{
+	width: 20px;
+	height: 20px;
+}
+
+/*-- SLIDE EQUIPO --*/
+
+.equipo-jr{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.slider-inner{
+	background-color: #A3BCCB;
+	box-shadow: 2px 2px 10px rgba(245, 243, 243, 0.35);
+	border-radius: 30px;
+	opacity: 0.9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 660px ;
+}
+
+.slide{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	height: auto;
+}
+
+.photo-equipo{
+	width: 250px;
+	height: 350px;
+	border-radius: 30px;
+}
+
+.box{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+}
+
+.resumen-equipo{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.resumen-equipo h3{
+	color: #141414;
+}
+
+.resumen-equipo h4{
+	color: #16a085;
+	font-size: 1rem;
+	font-weight: 400;
+	transform: scale(1, 2); 
+	text-transform: uppercase;
+
+}
+
+.resumen-equipo p{
+	color: #141414;
+	margin-top: 10px;
+	height: 150px;
+	width: 250px;
+}

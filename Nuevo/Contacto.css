@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background: url(background.jpg) no-repeat center center fixed;
+	color: #f6f6f2;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
+    margin: 0;
+}
+
+/*header --------*/
+
+header{
+	position: fixed; /* Mantén el header fijo al desplazarte */
+	top: 30px;
+	width: 70%; /* Asegura que cubra todo el ancho */
+	display: flex;
+	justify-content: space-between;  
+	align-items: center; 
+	background: linear-gradient(to right, #3A4B59, #607D8B, #A3BCCB);
+	padding: 20px 30px;   
+	opacity: 0.9; 
+	z-index: 10;
+	font-family: 'Roboto Slab', serif;
+	border-radius: 50px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para separación */
+	
+
+}
+
+.logo{
+	width: 60px;  
+    height: auto;  
+    max-height: 50px;  
+    object-fit: contain; 
+}
+
+
+.highlight {
+    color: #16a085;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;  
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #212121;
+    text-decoration: none;
+    transition: color 0.3s ease;  
+}
+
+header nav ul li a:hover {
+    color: #F4A261;  
+}
+
+/* Responsive */
+.burger{
+    width: 30px;
+    height: auto;
+    max-height: 30px;
+}
+
+.checkbtn{
+    float: right;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check{
+    display: none;
+}
+
+/*--- MAIN CONTAINER ---*/
+
+.main-container{
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.main-container h1{
+	font-size: 2.5rem;
+	font-weight: 400;
+	transform: scale(1, 2); 
+    text-transform: uppercase; 
+}
+
+.main-container h2{
+	font-size: 2rem;
+	font-weight: 400;
+	transform: scale(1,2);
+	text-transform: uppercase;
+}
+
+.main-container h3{
+	font-size: 1.75rem;
+	font-weight: 400;
+	transform: scale(1,2);
+	text-transform: uppercase;
+}
+
+.main-container p{
+	font-size: 1rem;
+	font-weight: 400;
+	transform: scale(1, 1.20);
+}
+
+/*--- MAIN CONTACT PRIMER BOX ---*/
+
+.main-contacto{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 1000px;
+	min-width: 300px;
+	justify-content: center;
+	align-items: center;
+	
+
+}
+
+/*--- EL TITULO Y AGRADECIMIENTO ---*/
+
+.titulo-box{
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	
+}
+
+/*--- INFORMACION, LOGO, MAPA ---*/
+
+.texto-box{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+
+}
+
+
+.logo-canal{
+	width: 120px;
+	height: 70px;
+	
+
+}
+
+.box-inner{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	width: 500px;
+	height: 600px;
+	background-color: #A3BCCB;
+	box-shadow: 2px 2px 10px rgba(245, 243, 243, 0.35);
+	border-radius: 30px;
+	opacity: 0.9;
+	
+}
+
+.highlight{
+	font-weight: bold;
+}
+
+.box-horario-logo{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px;
+	margin-left: 30px;
+
+}
+
+.box-1{
+	width: 300px;
+}
+
+
+.phoneEmail{
+	grid-column: 1/3;
+	
+	
+}
+.informacion{
+	margin-left: 30px;
+}
+
+.box-inner p{
+	color: #141414;
+}
+
+.informacion h3{
+	font-size: 1rem;
+	color: #141414;
+}
+.google{
+	margin-top: 30px;
+	width: 300px;
+	height: 120px;
+}
+
+/*--- CAJA DEL FORMULARIO ---*/
+
+.contact-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.titulo-formulario h3{
+	font-size: 1rem;
+	text-align: left;
+
+
+}
+
+.form-box .in-box{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.form-box .in-box span{
+    height: 30px;
+   
+}
+
+.form-box .in-box input{
+    height: 50px;
+    border: none;
+    background: transparent;
+    box-shadow: 2px 2px 10px rgba(245, 243, 243, 0.35);
+    color: #fff;  
+    
+}
+
+.form-box {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-gap: 20px;
+
+}
+
+.form-box .message-box{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+
+.form-box .message-box span{
+    height: 30px;
+}
+
+.form-box .message-box textarea{
+    height: 50px;
+    background: transparent;
+    box-shadow: 2px 2px 10px rgba(245, 243, 243, 0.35);
+    border: none;
+    color: #fff;
+
+}
+
+/*button to send */
+
+.form-box .box-button{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+}
+
+
+.box-button{
+    width: 100%;
+
+}
+
+.box-button .cerrar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    background: #141414;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+
+}
+
+.box-button .cerrar:hover{
+    background: #16a085;
+}

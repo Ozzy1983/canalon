@@ -1,0 +1,83 @@
+
+		<footer>
+
+			<div class="caja">
+		
+				<div class="informacion">
+					<h3>LOCALIZACI&Oacute;N</h3>
+					<iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.5489856106215!2d2.1652951154270283!3d41.42730817926064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd36f372205d%3A0xc4f5ef6953153381!2sPasseig%20de%20Maragall%2C%20351%2C%2008032%20Barcelona%2C%20Spain!5e0!3m2!1sen!2suk!4v1633168313628!5m2!1sen!2suk" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			
+				</div>
+			
+			
+				<div class="informacion">
+			
+					<h3>INFORMACI&Oacute;N AL CLIENTE</h3>
+					
+					<div class="detalle">
+						<div class="algo">
+							<img src="location.png" class="icono">
+							<p>
+								Paseo de Maragall, 351
+								08032 
+								
+							 </p>
+						</div> 
+		
+						<div class="algo">
+							<img src="telefono.png" class="icono">
+							<p>+34 633 47 79 14 </p>
+						</div>
+		
+						<div class="algo">
+							<img src="email.png" class="icono">  
+							<p>canalonesyplegados@gmail.com</p>
+						</div>				
+					</div>
+			
+			
+				</div>
+			
+					 
+				<div class="informacion">
+			
+					<h3>ATENCI&Oacute;N AL CLIENTE</h3> 
+					
+					<h4>Horario de invierno </h4>
+					<p>
+							Lunes a viernes<br>
+							9:00 a 14:00<br>
+							15:00 a 20:00<br>
+							
+					</p>
+			
+			
+			
+				</div>
+		
+		
+			</div> 
+			
+		
+		
+				
+		
+		
+			<div class="redes-sociales">
+				<h3>
+					Encuentranos en:
+				</h3>
+			
+				<a href="https://www.instagram.com/jr_canalspluvials/?hl=es"><img src="insta-logo.png" class="redes"></a> 
+				<img src="face-logo.png" class="redes">
+				<img src="twi-logo.png" class="redes">
+		
+			</div>
+			
+		
+			
+		
+			<p class="oswaldo">
+				Made by Oswald D. Gutierrez
+			</p>
+		</footer>

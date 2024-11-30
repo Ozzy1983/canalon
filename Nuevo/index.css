@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background: url(background.jpg) no-repeat center center fixed;
+	color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
+    margin: 0;
+}
+
+/*header --------*/
+
+header{
+	position: fixed; /* Mantén el header fijo al desplazarte */
+	top: 30px;
+	width: 70%; /* Asegura que cubra todo el ancho */
+	display: flex;
+	justify-content: space-between;  
+	align-items: center; 
+	background: linear-gradient(to right, #3A4B59, #607D8B, #A3BCCB);
+	padding: 20px 30px;   
+	opacity: 0.9; 
+	z-index: 10;
+	font-family: 'Roboto Slab', serif;
+	border-radius: 50px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para separación */
+	
+
+}
+
+.logo{
+	width: 60px;  
+    height: auto;  
+    max-height: 50px;  
+    object-fit: contain; 
+}
+
+
+.highlight {
+    color: #16a085;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;  
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #212121;
+    text-decoration: none;
+    transition: color 0.3s ease;  
+}
+
+header nav ul li a:hover {
+    color: #F4A261;  
+}
+
+/* Responsive */
+.burger{
+    width: 30px;
+    height: auto;
+    max-height: 30px;
+}
+
+.checkbtn{
+    float: right;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check{
+    display: none;
+}
+
+/* MAIN CONTAINER, PHOTO AND MORE THINGS */
+
+.main-introduction{
+	margin-top: 100px;
+	height: auto;
+	display: grid;
+	grid-template-columns: 600px 600px;
+	grid-gap: 20px;
+	
+
+}
+
+.photo-presentation{
+	width: 600px;
+	height: 700px;
+	border-radius: 20px;
+	
+}
+
+.introduce{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+
+}
+
+.introduce h1{
+	font-size: 2rem;
+	font-weight: 400;
+    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
+    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
+	
+}
+
+.introduce p{
+	margin-top: 100px;
+	left: 0;
+
+}
+
+
+
+footer{
+	margin-top: 30px;
+	
+}
+
+@media screen and (max-width: 710px){
+
+	/*HEADER */
+
+	.checkbtn {
+	   display: block;
+	   position: absolute;
+	   top: 25px;
+	   right: 20px;
+	   z-index: 4;
+	   cursor: pointer;
+    }
+
+   header{
+		width: 260px; /* Ajusta a todo el ancho de la pantalla */
+		position: fixed;
+		top: 0;
+		margin-top: 8px;
+		border-radius: 30px; 
+		opacity: 0.9;
+		z-index: 3;
+		padding: 15px 20px; /* Espaciado interno */
+		display: flex;
+		justify-content: space-between; /* Alinea los elementos en el header */
+		align-items: center;
+	   
+    }
+
+   ul {
+	   position: fixed;
+	   left: 0; 
+	   width: 100%; 
+	   background: linear-gradient(120deg,#1565C0, #2196F3, #6EC6FF);
+	   top: -120%; 
+	   height: 100vh; 
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+	   align-items: center;
+	   transition: all 0.5s;
+	   opacity: 0.9;
+	   z-index: 2;
+    }
+
+   nav ul li {
+	   padding: 20px 0;
+	   text-align: center;
+	   
+    }
+
+   nav ul li a {
+	   font-size: 18px;
+    }
+
+   header nav ul li a:hover {
+	   color: #F4A261;  
+    }
+
+   #check:checked ~ ul {
+	   top: 0; 
+	   height: 100vh;
+	   opacity: 0.9;
+    }
+
+	/* MAIN CONTAINER, PHOTO AND MORE THINGS */
+
+	.main-introduction{
+		margin-top: 0px;
+		height: auto;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;		
+	
+	}
+
+	.photo-presentation{
+		width: 300px;
+		
+    }
+
+	.introduce{
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		height: 400px;
+		
+		
+	}
+
+	.introduce h1{
+		font-size: 30px;
+		max-width: 300px;
+		
+	}
+
+	.introduce p{
+		margin-top: 30px;
+		font-size: 18px;
+
+	}
+
+   footer{
+	   margin-top: auto;
+	   width: 300px;
+	   font-size: 10px;
+    }
+}
