@@ -10,7 +10,11 @@
 	<meta name="author" content="Oswaldo D. Gutierrez">
 	<meta name="copyright" content=" JR Canalons Pluvials">
 	<meta name="robots" content="index">
+	<link rel="stylesheet" href="header.css">
     <link rel="stylesheet" type="text/css" href="index.css" >
+	<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -18,28 +22,31 @@
 
 	<header>
 
-		<div class="logo-canalons">
-			<a href="index.html">
-				<img src="frontal.png" class="logo" alt="">
-			</a>
-
-		</div>
-
 		<nav class="menu">
-			<input type="checkbox" id="check">
+
+			<div class="logo-canalons">
+				<a href="index.html"> <img src="frontal2.png" class="logo" alt=""> </a>
+			</div>
+
+			<ul id="menuList">
+				<li class="magic">  <a href="galeria.html">Acerca de</a> </li>
+				<li class="magic submenu">  
+					<a href="Servicios.html">Servicios <i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+					<ul  class="dropdown" >
+						<li><a href="canalones.html">Modelos de Canalones</a></li>
+						<li><a href="tipos-canalones.html">Tipos de Canalones</a></li>
+						<li><a href="colores.html">Colores de canalones</a></li>
+					</ul>
+				</li>
+				<li class="magic">  <a href="quienes_somos.html">Qui&eacute;nes somos</a> </li>
+				<li class="magic">  <a href="formacion.html">Formaci&oacute;n</a> </li>
+				<li class="magic">  <a href="Contacto.html">Contacto</a> </li>
+			</ul>
 
 			<label for="check" class="checkbtn">
-				<img class="osea" src="burger.png" alt="">
+				<img src="burger.png" class="burger" onclick="toggleMenu()">
 			</label>
-		
-			<ul>
-				<li>  <a href="Servicios.html">Servicios</a> </li>
-				<li>  <a href="Quienes somos.html">Qui&eacute;nes somos</a> </li>
-				<li>  <a href="formacion">Formaci&oacute;n</a> </li>
-				<li>  <a href="Contacto.html">Contacto</a> </li>
-			</ul>
 		</nav>
-		
 
 	</header>
 
@@ -48,34 +55,53 @@
 
 		<div class="main-introduction">
 
-			<div class="introduce">
-				<h1>
-					Más de 10 años de experiencia, especialización en cada área, la máxima calidad en nuestros servicios. 
-				</h1>
-				<p>
-					Confía en nosotros para proteger tu hogar.
-				</p>
+			<div class="slider-frame" id="target4">
+
+				<ul>
+					<li><img src="portada.jpg" alt="" class="photo-presentation"></li>
+					<li><img src="portada2.jpeg" alt="" class="photo-presentation"></li>
+					<li><img src="portada3.jpeg" alt="" class="photo-presentation"></li>
+					<li><img src="portada4.jpg" alt="" class="photo-presentation"></li>
+
+				</ul>
 	
 			</div>
 
-			<div class="presentation">
+			<div class="introduce" >
 
-				<img src="portada.jpg" alt="" class="photo-presentation">
-	
-	
-	
+				<div class="caja content" id="target1">
+				
+					<h1 id="dynamicText3"> Instalación de </h1>
+					
+				</div>
+				
+
+				<div class="caja content" id="target2">
+
+					<h1 id="dynamicText2">canalones pluviales.</h1>
+
+				</div>
+			
+
+				<div class="caja content" id="target3">
+					
+					<h1 id="dynamicText">Gracias por su confianza.</h1>
+
+				</div>
+
+				<button class="boton" id="target0">
+					<a href="Contacto.html">Presupuesto sin costo</a>
+				</button>
+			
+				
 			</div>
 	
 		</div>
 
 
-		
-
-
-
 		<footer>
 			<p>
-				&copy; 2024 Oswaldo Cardozo Gutierrez. copyright
+				&copy; 2024 made by <a href="https://oswaldodgutierrez.netlify.app/" class="enlace-footer"><p>Oswaldo D. Gutierrez</p></a>
 			</p>
 		</footer>
 
@@ -83,6 +109,21 @@
 
 	</div>
 
+	<script src="index.js"></script>
+
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#target1").fadeIn(2000).css("display", "flex");
+			$("#target2").fadeIn(4000).css("display", "flex");
+			$("#target3").fadeIn(6000).css("display", "flex");
+			$("#target0").fadeIn(6000).css("display", "flex");
+
+		});
+	</script>
+	
 
 
 

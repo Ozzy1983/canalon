@@ -1,350 +1,296 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-	background: url(background.jpg) no-repeat center center fixed;
-	color: #f6f6f2;
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-	flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
-    margin: 0;
-}
-
-/*header --------*/
-
-header{
-	position: fixed; /* Mantén el header fijo al desplazarte */
-	top: 30px;
-	width: 70%; /* Asegura que cubra todo el ancho */
-	display: flex;
-	justify-content: space-between;  
-	align-items: center; 
-	background: linear-gradient(to right, #3A4B59, #607D8B, #A3BCCB);
-	padding: 20px 30px;   
-	opacity: 0.9; 
-	z-index: 10;
-	font-family: 'Roboto Slab', serif;
-	border-radius: 50px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para separación */
-	
-
-}
-
-.logo{
-	width: 60px;  
-    height: auto;  
-    max-height: 50px;  
-    object-fit: contain; 
-}
-
-
-.highlight {
-    color: #16a085;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;  
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #212121;
-    text-decoration: none;
-    transition: color 0.3s ease;  
-}
-
-header nav ul li a:hover {
-    color: #F4A261;  
-}
-
-/* Responsive */
-.burger{
-    width: 30px;
-    height: auto;
-    max-height: 30px;
-}
-
-.checkbtn{
-    float: right;
-    cursor: pointer;
-    display: none;
-
-}
-
-#check{
-    display: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 /* MAIN CONTAINER ---*/
 
 .main-container{
-	margin-top: 100px;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
-
-}
-
-.main-container h1{
-	font-size: 2.5rem;
-}
-
-.main-container h2{
-	font-size: 2rem;
-	font-weight: 400;
-}
-
-.main-container h3{
-	font-size: 1.75rem;
-	font-weight: 400;
-}
-
-.main-container p{
-	font-size: 1rem;
-	font-weight: 400;
-}
-
-
-/* MAIN SERVICE ----*/
-.main-service{
-	margin-top: 100px;
-	width: auto;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	gap: 100px;
+	justify-content: center;
+	gap: 50px;
+	width: 100%;
+	background-color: #213140;
+}
+
+/*---- TITULOS---*/
+
+.titulos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	background-color: aliceblue;; 
+	height: 400px;
+	text-align: center;
+}
+
+.titulos h1{
+	color: #151515;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	
+}
+
+.titulos p{
+	width: 40%;
+	font-family: 'Open Sans', sans-serif;
+	color: #151515;
+	font-weight: lighter;
+	text-align: center;
 }
 
 
-/* PRIMERA CAJA, SOSTENIBILIDAD ----*/
+/*--GALERIA, PRIMERA CASA--*/
 
-.sostenibilidad{
+.slider-container{
+	width: 70%;
+	
+}
+
+.slider {
+    display: flex;
+	align-items: center;
+    gap: 10px; /* Espacio entre elementos */
+    overflow: hidden; /* Oculta el desplazamiento en pantallas grandes */
+	height: auto; 
+
+}
+
+.slide {
+    flex: 0 0 calc(100% / 4); /* Divide el espacio en 4 columnas */
+}
+
+.Ventana {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #607D8B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.picture {
+    width: 256px; 
+    height: 256px; 
+    border-radius: 10px;
+    object-fit: cover;
+	box-shadow: 2px 2px 10px rgba(238, 237, 237, 0.35)
+}
+
+.titulo {
+	width: 256px;
+	text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+	color: #fff;
+}
+
+.parrafo {
+    width: 100%;
+	max-width: 256px;
+	height: 350px; 
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #A3BCCB;
+	box-shadow: 2px 2px 10px rgba(238, 237, 237, 0.35); 
+    text-align: justify; 
+}
+
+/* SEGUNDA CAJA, SOSTENIBILIDAD, SERVICIOS ----*/
+
+.main-service{
+	width: 70%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 20px;
 	height: auto;
-	align-items: center;
-	
-	
 }
 
-.sostenibilidad h1{
-    font-weight: 400;
-    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
-    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
-	height: 40px;
-	text-align: center;
-	
-}
-
-.sostenibilidad .resumen-sostenibilidad{
+.box{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	align-items: center;
-	height: 200px;
-	margin-left: 20px;
-	border-radius: 20px;
-	background-color: #153c77;
-	box-shadow: 2px 2px 10px rgba(170, 167, 167, 0.35);
-	opacity: 0.9;
-	width: 600px;
+	gap: 20px;
+	padding: 20px;
+}
+
+.box h3{
+	color: #fff;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+}
+
+.box p{
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-weight: lighter;
 
 }
 
-.sostenibilidad h2{
-	width: 550px;
-	left: 0;
-	font-size: 1rem;
-	font-weight: 400;
-    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
-    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
-	color: #E3F2FD ;
-}
-
-.sostenibilidad p{
-	width: 550px;
-	font-size: 1.20rem;
-	margin-top: 10px;
-	color: #E3F2FD ;
-
-}
-
-
-
-
-/* SEGUNDA CAJA DE SERVICIOS ----*/
-
-.resumen-servicios{
-	display: grid;
-	grid-template-columns: repeat(2, 2fr);
-	grid-gap: 20px;
-	height: auto;
-	justify-content: center;
-	align-items: center;
+#box-color1{
+    background-color: #607D8B;
 	
 }
 
-.resumen-uno{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 250px;
-	border-radius: 20px;
-	background-color: #153c77;
-	box-shadow: 2px 2px 10px rgba(170, 167, 167, 0.35);
-	opacity: 0.9;
-	width: 600px;	
-}
-
-.resumen-uno p{
-	width: 550px;
-	font-size: 1.20rem;
-	margin-top: 10px;
-	color: #E3F2FD ;
+#box-color2{
+    background-color: #A3BCCB;
 	
 }
 
-.resumen-uno h2{
-	width: 550px;
-	left: 0;
-	font-size: 1rem;
-	font-weight: 400;
-    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
-    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
-	margin-top: 10px;
-	color: #E3F2FD ;
+.Tlf-color{
+	color: #16a085;
 }
 
-.enlace{
-	color: #E3F2FD;
-}
+/*--- caja final y boton ---*/
 
-.resumen-dos{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.resumen-dos p{
-	width: 550px;
-	font-size: 1rem;
-	font-weight: 400;
-    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
-    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
-	color: #E3F2FD ;
-	text-align: left;
-
-}
-
-
-/*BOTTON*/
-.tipos-canaletas{ 
-	margin-top: 20px;
-	width: 100px;
-	height: 50px;
-	border-radius: 20px;
-	cursor: pointer;
-	margin-left: auto;
-	background-color: #16a085;
-	font-family: 'Poppins', sans-serif;
-}
-
-.tipos-canaletas:hover{
-	transform: scale(1.2);
-	background-color: #F4A261;
-}
-
-
-
-
-/*---- TERCERA CAJA  GALERIA DE SERVICIOS ---*/
-
-.galeria{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px;
-	height: auto;
-	
-	
-	
-}
-
-.ventana{
-	display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-   
-}
-
-
-.picture{
-	width: 100%; 
-    max-width: 350px;
-    height: 350px;
-    border-radius: 20px;
-	
-}
-
-.titulo{
-	display: flex;
-	align-items: center;
-	width: 100%; 	
-	height: 100px;
-}
-
-.titulo h3{
-	font-weight: 400;
-    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
-    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
-
-}
-
-.parrafo{
+.final{
+	background-color: #151515;
 	width: 100%;
-    max-width: 350px; 
-	height: 300px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	gap: 50px;	
+}
+
+.final h2{
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+	color: #fff;
+	text-align: center;
+}
+
+.boton{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	color: #213140;
+	background-color: #e0c45c;
+	cursor: pointer;
+	border: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.boton a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.boton:hover{
+	background-color: #213140;
+	color: #fff;
+}
+
+.networks a{
+	display: inline-block;
+	font-size: 18px;
+	color: #e0c45c;
+	transition: transform 0.3s ease;
+	margin-left: 10px;
 	
 }
 
-.parrafo p{
-	font-family: 'Poppins', sans-serif;
-	
+.networks a:hover{
+	color: #213140;
+	transform: scale(1.2);
+}
 
+/*---scroll down ---*/
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Baja el elemento al inicio */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
 
+/*---- para laptop----*/
 
+@media screen and (max-width: 770px){	
 
+	/* MAIN CONTAINER, PHOTO AND MORE THINGS */
 
-
-
-
-
-
-footer {
-    margin-top: 30px;
-}
-
+	.main-service{
+		grid-template-columns: 1fr;
 		
+		
+	}
+
+	.slider{
+		grid-template-columns: 1fr;
+
+	}
+
+
+}
+
+/*----  para movil----*/
+
+@media screen and (max-width: 425px){
+
+	.titulos p{
+		width: 80%;
+	}
+	/*--- CONTAINER ---*/
+
+	.parrafo{
+		width: 250px;
+		height: 300px;
+	}
+
+	/*--- slider ---*/
+
+	.slider-container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		max-width: 400px;
+	}
+	
+	.slider {
+        overflow-x: auto; /* Permite el scroll horizontal en móviles */
+        scroll-snap-type: x mandatory; /* Hace que los elementos se alineen al deslizar */
+        scroll-behavior: smooth; /* Deslizamiento suave */
+    }
+
+    .slide {
+        flex: 0 0 100%; /* Cada slide ocupa toda la pantalla */
+        scroll-snap-align: center; /* Centra el slide en la vista */
+    }
+
+	/*--- Second part */
+
+	.main-service{
+		grid-template-columns: 300px;
+		
+		justify-content: center;
+
+	}
+
+	#box-color{
+		height: 300px;
+	}
+
+
+
+}

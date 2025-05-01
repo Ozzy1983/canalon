@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+.main-container{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+/*---- TITULOS---*/
+
+.titulos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	background-color: aliceblue;; 
+	height: 400px;
+	text-align: center;
+}
+
+.titulos h1{
+	color: #151515;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	
+}
+
+.titulos p{
+	width: 40%;
+	font-family: 'Open Sans', sans-serif;
+	color: #151515;
+	font-weight: lighter;
+	text-align: center;
+}
+
+/*-- modelos de canalones ---*/
+
+.modelos-canalones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.canalon{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.texto{
+    width: 500px;
+    padding: 20px;
+    background-color: #607D8B;
+    /*background: linear-gradient(to right, #3A4B59, #607D8B, #A3BCCB);*/
+   
+}
+
+.texto h3{
+    color: #fff;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+}
+
+.texto p{
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-weight: lighter;
+}
+
+
+/*--- caja final y boton ---*/
+
+.final{
+	background-color: #151515;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	gap: 50px;	
+}
+
+.final h2{
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+	color: #fff;
+	text-align: center;
+}
+
+.boton{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	color: #213140;
+	background-color: #e0c45c;
+	cursor: pointer;
+	border: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.boton a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.boton:hover{
+	background-color: #213140;
+	color: #fff;
+}
+
+.networks a{
+	display: inline-block;
+	font-size: 18px;
+	color: #e0c45c;
+	transition: transform 0.3s ease;
+	margin-left: 10px;
+	
+}
+
+.networks a:hover{
+	color: #213140;
+	transform: scale(1.2);
+}
+
+/* slider photo -- */
+
+.slider-frame{
+    width: 200px;
+    height: 200px;
+    overflow: hidden; 
+    position: relative;
+}
+
+.slider-frame ul{
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 200px; 
+    height: 200px;
+    object-fit: cover; 
+	
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    
+    25% { margin-left: -200px; }
+    45% { margin-left: -200px; }
+    
+    50% { margin-left: -400px; }
+    70% { margin-left: -400px; }
+    
+    75% { margin-left: -600px; }
+    100% { margin-left: -600px; }
+}
+
+/*---scroll down ---*/
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Baja el elemento al inicio */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 770px){	
+
+	/* MAIN CONTAINER, PHOTO AND MORE THINGS */
+
+	
+
+
+}
+
+/*----  para movil----*/
+
+@media screen and (max-width: 425px){
+
+    .canalon{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .texto{
+        width: 200px;
+    }
+}

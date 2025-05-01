@@ -1,247 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-}
+/* MAIN CONTAINER*/
 
-body{
-	background: url(background.jpg) no-repeat center center fixed;
-	color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-	flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
-    margin: 0;
-}
-
-/*header --------*/
-
-header{
-	position: fixed; /* Mantén el header fijo al desplazarte */
-	top: 30px;
-	width: 70%; /* Asegura que cubra todo el ancho */
+.main-container{
 	display: flex;
-	justify-content: space-between;  
-	align-items: center; 
-	background: linear-gradient(to right, #3A4B59, #607D8B, #A3BCCB);
-	padding: 20px 30px;   
-	opacity: 0.9; 
-	z-index: 10;
-	font-family: 'Roboto Slab', serif;
-	border-radius: 50px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para separación */
-	
+	flex-direction: column;
+	width: 100%;
 
 }
-
-.logo{
-	width: 60px;  
-    height: auto;  
-    max-height: 50px;  
-    object-fit: contain; 
-}
-
-
-.highlight {
-    color: #16a085;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;  
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #212121;
-    text-decoration: none;
-    transition: color 0.3s ease;  
-}
-
-header nav ul li a:hover {
-    color: #F4A261;  
-}
-
-/* Responsive */
-.burger{
-    width: 30px;
-    height: auto;
-    max-height: 30px;
-}
-
-.checkbtn{
-    float: right;
-    cursor: pointer;
-    display: none;
-
-}
-
-#check{
-    display: none;
-}
-
-/* MAIN CONTAINER, PHOTO AND MORE THINGS */
 
 .main-introduction{
-	margin-top: 100px;
+	position: relative;
+	width: 100%;
 	height: auto;
-	display: grid;
-	grid-template-columns: 600px 600px;
-	grid-gap: 20px;
-	
 
 }
 
-.photo-presentation{
-	width: 600px;
-	height: 700px;
-	border-radius: 20px;
+.slider-frame{
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
 	
 }
 
 .introduce{
+	position: absolute;
+  	top: 30%;
+  	left: 50%;
+  	transform: translate(-50%, -50%); /* Centra respecto al div padre */
+  	width: 90%;
+  	height: 50px;
+	z-index: 1;
+
+}
+
+.caja h1{
+	color: #fff;
+	font-size: 5rem;
+	font-family: 'Oswald', sans-serif;
+	-webkit-text-stroke: 0.5px black;
+	text-align: center;
+}
+
+.boton {
 	display: flex;
-	flex-direction: column;
+	align-items: center;
 	justify-content: center;
+	margin: 50px 0;
+	width: 200px;
+	height: 50px;
+	color: #213140;
+	background-color: #e0c45c;
+	cursor: pointer;
+	border: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.boton a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.boton:hover{
+	background-color: #213140;
+	color: #fff;
+}
+
+
+/*---jquery ---*/
+#target0, #target1, #target2, #target3{
+	display: none;
+
+}
+
+/* slider photo -- */
+
+
+.slider-frame ul{
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
 	
-
 }
 
-.introduce h1{
-	font-size: 2rem;
-	font-weight: 400;
-    transform: scale(1, 2); /* Letras alargadas verticalmente al doble */
-    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+.photo-presentation{
+	width: 100%;
+	height: 800px;
+	opacity: 0.6;
+	object-fit: cover;
+}
+
+
+
+@media screen and (max-width: 770px){
+	
+	.caja h1 {
+        font-size: 3rem;
+    }
+    
+    .introduce {
+        width: 90%;
+    }
+    
+    .photo-presentation {
+        height: 600px;
+    }
 	
 }
 
-.introduce p{
-	margin-top: 100px;
-	left: 0;
 
-}
+@media screen and (max-width: 425px){
 
+	.caja h1 {
+        font-size: 2rem;
+    }
+    
+    .introduce {
+        top: 35%;
+        width: 100%;
+		margin-left: 10px;
+    }
+    
+    .photo-presentation {
+        height: 600px;
+    }
+    
+    .boton {
+        width: 160px;
+        font-size: 10px;
+    }
 
-
-footer{
-	margin-top: 30px;
 	
 }
 
-@media screen and (max-width: 710px){
 
-	/*HEADER */
 
-	.checkbtn {
-	   display: block;
-	   position: absolute;
-	   top: 25px;
-	   right: 20px;
-	   z-index: 4;
-	   cursor: pointer;
-    }
 
-   header{
-		width: 260px; /* Ajusta a todo el ancho de la pantalla */
-		position: fixed;
-		top: 0;
-		margin-top: 8px;
-		border-radius: 30px; 
-		opacity: 0.9;
-		z-index: 3;
-		padding: 15px 20px; /* Espaciado interno */
-		display: flex;
-		justify-content: space-between; /* Alinea los elementos en el header */
-		align-items: center;
-	   
-    }
 
-   ul {
-	   position: fixed;
-	   left: 0; 
-	   width: 100%; 
-	   background: linear-gradient(120deg,#1565C0, #2196F3, #6EC6FF);
-	   top: -120%; 
-	   height: 100vh; 
-	   display: flex;
-	   flex-direction: column;
-	   justify-content: center;
-	   align-items: center;
-	   transition: all 0.5s;
-	   opacity: 0.9;
-	   z-index: 2;
-    }
 
-   nav ul li {
-	   padding: 20px 0;
-	   text-align: center;
-	   
-    }
-
-   nav ul li a {
-	   font-size: 18px;
-    }
-
-   header nav ul li a:hover {
-	   color: #F4A261;  
-    }
-
-   #check:checked ~ ul {
-	   top: 0; 
-	   height: 100vh;
-	   opacity: 0.9;
-    }
-
-	/* MAIN CONTAINER, PHOTO AND MORE THINGS */
-
-	.main-introduction{
-		margin-top: 0px;
-		height: auto;
-		display: flex;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;		
-	
-	}
-
-	.photo-presentation{
-		width: 300px;
-		
-    }
-
-	.introduce{
-		display: flex;
-		flex-direction: column;
-		width: 300px;
-		height: 400px;
-		
-		
-	}
-
-	.introduce h1{
-		font-size: 30px;
-		max-width: 300px;
-		
-	}
-
-	.introduce p{
-		margin-top: 30px;
-		font-size: 18px;
-
-	}
-
-   footer{
-	   margin-top: auto;
-	   width: 300px;
-	   font-size: 10px;
-    }
-}
